@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <br> 
+        <h1>Criptografia de Texto - Alura  </h1>
+        <p>Oracle Next Education F2 T3</p>
+   
+    </head>
+
+    <body>
+        <br>
+        
+        <table width="100%" border="5" cellspacing="30" cellpadding="120">
+
+            <tr>
+
+                <td align = "center">
+                    <label for="0">Digite o texto</label><br>
+                    <textarea  name="1" id="0" rows="7" cols="30"></textarea> <br/>
+                    <input type="button" value="Criptografar Texto" onclick="Cript();"/>
+                </td>
+
+                <td align = "center">
+                    <label for="1">Texto codificado</label><br>
+                    <textarea name = "2" id = "1" rows = "7" cols="30"></textarea> <br/>
+                    <input type="button" value="Limpar" onclick="Limpar();"/>   
+                </td>
+
+                <td align = "center">
+                    <label for="2">Descriptografar</label><br>
+                    <textarea  name = "3" id = "2" rows = "7" cols="30" ></textarea> <br/>
+                    <input type = "button" value = "Descripto" onclick = "Descry();" />
+                </td>
+            </tr>
+        </table>
+        <script language="javascript">
+
+            function ASC(String) {
+                return String.charCodeAt(0);
+            }
+
+            function CHAR(Ascii) {
+                return String.fromCharCode(Ascii);
+            }
+
+            var chave = "qwertasdfgzxcvbyuiopghjkljumdrftasdfgasdfqwdefrgtyhju";
+
+            function Cript() {
+                
+                var dados = document.getElementById("0").value;
+                var texto = "";
+                var len;
+                var p = 0;
+                var i;
+
+                for ( i = 0; i < dados.length; i++ ) {
+                    p++;
+                    len = (ASC(dados.substr(i,1)) + (ASC(chave.substr(p,1))));
+                    
+                    if ( p == 50 ) {
+                        p = 1;
+                    }
+
+                    if ( len > 255 ) {
+                        len -= 256;
+                    }
+
+                    texto += (CHAR(len));
+                }
+                
+
+                document.getElementById("1").value = texto;
+            }
+
+            function Descry() {
+                
+                var dados = document.getElementById("1").value;
+                var texto = "";
+                var len;
+                var p = 0;
+                var i;
+
+                for ( i = 0; i < dados.length; i++ ) {
+                    p++;
+                    len = (ASC(dados.substr(i,1)) - (ASC(chave.substr(p,1))));
+                    
+                    if ( p == 50 ) {
+                        p = 1;
+                    }
+
+                    if ( len < 0 ) {
+                        len += 256;
+                    }
+
+                    texto += (CHAR(len));
+                }
+                
+
+                document.getElementById("2").value = texto;
+            }
+
+            function Limpar() {
+                for (var i = 0; i < 3; i++) {
+                    document.getElementById(i).value = "";
+                }
+
+            }
+   
+        </script>
+
+    </body> 
+    <footer>
+        <p class="copyright">&copy;Copyright ArtDesk - 2022</p>
+
+    </footer>
+</html>   

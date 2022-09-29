@@ -1,0 +1,72 @@
+body {
+	font-family: 'Montserrat';
+	background-image: url('cryptoBanner.jpg');
+}
+
+.imagemComputador {
+	float:left ;
+}
+
+h1{
+	text-transform: uppercase;
+	text-align: center;
+	color: #1E90FF;
+	font-weight:bold;
+	font-size: 30px;
+	text-decoration: none;
+}
+p {
+	text-align: center;
+	color: #1E90FF;
+	font-size: 20px;
+}
+
+table {
+	width="100%"
+	border="5"
+	cellspacing="30"
+	cellpadding="120"
+	margin: 10px 0;
+}
+textarea {
+    resize: none;
+    font-size: 20px;
+    box-shadow: 10px 10px 5px #708090;
+}
+
+tr, td{
+	display: block;
+	margin: 0 0 20px;
+	color: #1E90FF;
+	font-weight:bold;
+	font-size: 18px;
+	text-decoration: none;
+
+}
+
+.copyright {
+	text-align: center;
+	color: #000000;
+	font-size: 15px;
+}
+
+@media screen and (max-width:480px ) {
+
+	body{
+		display: flex;
+		flex: direction: column;
+		align-items: center;
+		background-image: url('cryptoBanner.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		padding: 20px;
+
+
+	} 
+	textarea{
+		width: auto;
+	}
+		
+}
