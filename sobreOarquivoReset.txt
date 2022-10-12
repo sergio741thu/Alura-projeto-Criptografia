@@ -1,0 +1,5 @@
+Incluir no projeto o arquivo contendo o código para realizar o Reset CSS deve ser inserido antes de qualquer outro arquivo de estilo, para que toda formatação adicional seja feita com base nos elementos “sem estilo”.
+
+Mais informações, acessar:
+
+https://www.alura.com.br/artigos/o-que-e-reset-css?gclid=Cj0KCQjwy5maBhDdARIsAMxrkw2aRvVVtUaXZ4WJ8iyBaIA6UtfeegGzbVY9HAfBq5hCL5psV7VhlDIaAoXrEALw_wcB

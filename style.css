@@ -1,14 +1,11 @@
 body {
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	background-image: url('cryptoBanner.jpg');
+	background-repeat: no-repeat;
+	
 }
 
-.imagemComputador {
-	float:left ;
-}
-
-h1{
-	text-transform: uppercase;
+h1 {
 	text-align: center;
 	color: #1E90FF;
 	font-weight:bold;
@@ -21,29 +18,34 @@ p {
 	font-size: 20px;
 }
 
-table {
-	width="100%"
-	border="5"
-	cellspacing="30"
-	cellpadding="120"
-	margin: 10px 0;
-}
 textarea {
     resize: none;
     font-size: 20px;
     box-shadow: 10px 10px 5px #708090;
 }
 
-tr, td{
+tr, td {
 	display: block;
 	margin: 0 0 20px;
 	color: #1E90FF;
 	font-weight:bold;
 	font-size: 18px;
 	text-decoration: none;
-
 }
 
+input[type="button"] {
+ 	font-size: 14px;
+ 	width: 15%;
+ 	padding: 6px 0;
+ 	background: green;
+ 	color: white;
+ 	font-weight: bolder;
+ 	border: none;
+ 	border-radius: 5px;
+ 	cursor: pointer;
+
+}
+ 
 .copyright {
 	text-align: center;
 	color: #000000;
@@ -52,21 +54,26 @@ tr, td{
 
 @media screen and (max-width:480px ) {
 
-	body{
-		display: flex;
-		flex: direction: column;
-		align-items: center;
-		background-image: url('cryptoBanner.jpg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		text-align: center;
-		padding: 20px;
+body {
+	background-image: url('cryptoBannerTop.jpg');
+	background-size: 700px ;
+}
+h1{
+	font-size: 25px;
+	color: #0000FF;
 
+}
+	
+p {
+	font-size: 16px;
+	color: #0000FF;
+	font-weight:bold;
+}
+tr, td {
+	font-size: 20px;
+	color: #0000FF;
+}
 
-	} 
-	textarea{
-		width: auto;
-	}
-		
+input[type="button"] {
+	width: 40%;
 }
